@@ -11,18 +11,21 @@
 <Group xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Canvas height="720.0" width="1280.0" />
-      <Label id="textSave" layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="75.0" text="Save:">
+      <Label fx:id="textSave" layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="75.0" text="Save:">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <ImageView id="imageSave" fitHeight="50.0" fitWidth="50.0" layoutX="89.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-      <Rectangle id="playerRect" arcHeight="5.0" arcWidth="5.0" fill="#1fe4ff" height="72.0" layoutX="288.0" layoutY="360.0" stroke="TRANSPARENT" strokeType="INSIDE" width="72.0" />
-      <Rectangle id="ground1" arcHeight="5.0" arcWidth="5.0" fill="#686972" height="288.0" layoutY="432.0" stroke="TRANSPARENT" strokeType="INSIDE" width="792.0" />
-      <Polygon id="spike1" fill="#ff271f" layoutX="540.0" layoutY="393.0" points="-36.0, 40.0, 36.0, 40.0, 0.0, -34.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Polygon id="spike2" fill="#ff271f" layoutX="612.0" layoutY="393.0" points="-36.0, 40.0, 36.0, 40.0, 0.0, -34.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Rectangle id="box1" arcHeight="5.0" arcWidth="5.0" fill="#b0b1bc" height="72.0" layoutX="648.0" layoutY="360.0" stroke="TRANSPARENT" strokeType="INSIDE" width="72.0" />
-      <Rectangle id="box2" arcHeight="5.0" arcWidth="5.0" fill="#b0b1bc" height="72.0" layoutX="720.0" layoutY="360.0" stroke="TRANSPARENT" strokeType="INSIDE" width="72.0" />
+      <ImageView fx:id="imageSave" fitHeight="50.0" fitWidth="50.0" layoutX="89.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <Rectangle fx:id="playerRect" arcHeight="5.0" arcWidth="5.0" fill="#21fffc" height="72.0" layoutX="288.0" layoutY="360.0" stroke="TRANSPARENT" strokeType="INSIDE" width="72.0" />
+      <Rectangle fx:id="ground1" arcHeight="5.0" arcWidth="5.0" fill="#686972" height="288.0" layoutY="432.0" stroke="TRANSPARENT" strokeType="INSIDE" width="792.0" />
+      <Polygon fx:id="spike1" fill="#ff271f" layoutX="540.0" layoutY="393.0" points="-36.0, 40.0, 36.0, 40.0, 0.0, -34.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Polygon fx:id="spike2" fill="#ff271f" layoutX="612.0" layoutY="393.0" points="-36.0, 40.0, 36.0, 40.0, 0.0, -34.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Rectangle fx:id="box1" arcHeight="5.0" arcWidth="5.0" fill="#b0b1bc" height="72.0" layoutX="648.0" layoutY="360.0" stroke="TRANSPARENT" strokeType="INSIDE" width="72.0" />
+      <Rectangle fx:id="box2" arcHeight="5.0" arcWidth="5.0" fill="#b0b1bc" height="72.0" layoutX="720.0" layoutY="360.0" stroke="TRANSPARENT" strokeType="INSIDE" width="72.0" />
       <Label alignment="CENTER" layoutX="220.0" layoutY="152.0" prefHeight="100.0" prefWidth="208.0" text="Instructions" wrapText="true" />
+      <Rectangle fx:id="box3" arcHeight="5.0" arcWidth="5.0" fill="#b0b1bc" height="72.0" layoutX="864.0" layoutY="288.0" stroke="TRANSPARENT" strokeType="INSIDE" width="72.0" />
+      <Rectangle fx:id="box4" arcHeight="5.0" arcWidth="5.0" fill="#b0b1bc" height="72.0" layoutX="936.0" layoutY="288.0" stroke="TRANSPARENT" strokeType="INSIDE" width="72.0" />
+      <Rectangle fx:id="box5" arcHeight="5.0" arcWidth="5.0" fill="#b0b1bc" height="72.0" layoutX="1152.0" layoutY="360.0" stroke="TRANSPARENT" strokeType="INSIDE" width="72.0" />
    </children>
 </Group>
