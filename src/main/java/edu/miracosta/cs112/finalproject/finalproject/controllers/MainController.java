@@ -34,19 +34,17 @@ public class MainController {
     private Polygon spike2;
 
     protected void handleKeyPressed(KeyEvent e) {
-        int keyCode = e.getKeyCode();
-
-        switch (keyCode) {
-            case KeyEvent.VK_UP:
+        switch (e.getCode()) {
+            case UP:
 
                 break;
-            case KeyEvent.VK_DOWN:
+            case DOWN:
 
                 break;
-            case KeyEvent.VK_LEFT:
+            case LEFT:
 
                 break;
-            case KeyEvent.VK_RIGHT:
+            case RIGHT:
 
                 break;
         }
