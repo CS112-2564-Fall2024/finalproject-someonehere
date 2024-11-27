@@ -7,6 +7,8 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 
+import java.util.ArrayList;
+
 public class MainController {
     @FXML
     private Label labelInstructions;
@@ -16,8 +18,6 @@ public class MainController {
     private ImageView imageSave;
     @FXML
     private Rectangle ground1;
-    @FXML
-    private Rectangle playerRect;
     @FXML
     private Rectangle box1;
     @FXML
@@ -32,6 +32,14 @@ public class MainController {
     private Polygon spike1;
     @FXML
     private Polygon spike2;
+    @FXML
+    private Rectangle playerRect;
+    //private Player player;
+
+   // ArrayList<GameObject> objectList = new ArrayList<>();
+
+    @FXML
+
 
     protected void handleKeyPressed(KeyEvent e) {
         switch (e.getCode()) {
@@ -47,6 +55,10 @@ public class MainController {
             case RIGHT:
 
                 break;
+            case SPACE: //player.jump();
+                break;
+            default:
+
         }
     }
 }
