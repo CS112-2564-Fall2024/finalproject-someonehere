@@ -55,7 +55,7 @@ public class MainController {
             case RIGHT:
 
                 break;
-            case SPACE: //player.jump();
+            case SPACE: player.jump();
                 break;
             default:
 
