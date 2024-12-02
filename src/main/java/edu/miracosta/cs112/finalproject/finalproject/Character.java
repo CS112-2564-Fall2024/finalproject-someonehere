@@ -1,8 +1,8 @@
 package edu.miracosta.cs112.finalproject.finalproject;
 
 public abstract class Character {
-    private Rect image;
-    private Movement move;
+    private int movePixels;
+    private int dash;
     protected int HP;
 
     /**
@@ -10,36 +10,53 @@ public abstract class Character {
     protected Character() {
     }
 
-    // Getters
-    public Rect getImage () {
-        return this.image;
+    /** GETTERS
+     *
+     * @return how much that character moves
+     */
+    public int getMove () {
+        return this.movePixels;
     }
-    public Movement getMove () {
-        return this.move;
-    }
-    public Movement getDash () {
+
+    /**
+     *
+     * @return character using dash
+     */
+    public int getDash () {
         return this.dash;
     }
+
+    /**
+     *
+     * @return character's HP
+     */
     public int getHP () {
         return this.HP;
     }
 
-    // Setters
-    public void setImage (Rect image) {
-        this.image = image;
+
+    /** SETTERS
+     *
+     * @param movePixels
+     */
+    public void setMove (int movePixels) {
+        this.movePixels = movePixels;
     }
-    public void setMove (Movement move) {
-        this.move = move;
+
+    /**
+     *
+     * @param movePixels
+     */
+    public void setDash (int movePixels) {
+        this.dash = movePixels * 2;
     }
-    public void setDash (Movement dash) {
-        this.dash = dash;
-    }
+
+    /**
+     *
+     * @param HP
+     */
     public void setHP (int HP) {
         if (HP >= 0)
             this.HP = HP;
-    }
-
-    public Movement useDash(Movement move) {
-        this.move = move * 2;
     }
 }
