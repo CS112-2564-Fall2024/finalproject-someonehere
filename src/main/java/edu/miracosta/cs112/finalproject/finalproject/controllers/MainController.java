@@ -62,10 +62,28 @@ public class MainController {
     @FXML
     private Polygon spike2;
     @FXML
+    private Polygon spike3;
+    @FXML
+    private Polygon spike4;
+    @FXML
+    private Polygon spike5;
+    @FXML
+    private Polygon spike6;
+    @FXML
+    private Polygon spike7;
+    @FXML
+    private Polygon spikeMove1;
+    @FXML
     private Rectangle rectPlayer;
     private Player player;
 
     ArrayList<GameObject> objectList = new ArrayList<>();
+    private AnimationTimer gameTimer = new AnimationTimer() {
+        @Override
+        public void handle(long now) {
+            updateAll();
+        }
+    };
 
     @FXML
     private void initialize() {
@@ -73,21 +91,72 @@ public class MainController {
         objectList.add(new GameObject(ground2));
         objectList.add(new GameObject(ground3));
 
-        player = new Player(rectPlayer);
-        objectList.add(player);
+        objectList.add(new GameObject(box1));
+        objectList.add(new GameObject(box2));
+        objectList.add(new GameObject(box3));
+        objectList.add(new GameObject(box4));
+        objectList.add(new GameObject(box5));
+        objectList.add(new GameObject(box6));
+        objectList.add(new GameObject(box7));
 
-        AnimationTimer timer = (l) -> {
-            for (GameObject o : objectList)
-                o.update();
-        };
-        timer.start();
+        objectList.add(new GameObject(boxMove1));
+
+        objectList.add(new GameObject(boxFinish1));
+        objectList.add(new GameObject(boxFinish2));
+        objectList.add(new GameObject(boxFinish3));
+        objectList.add(new GameObject(boxFinish4));
+        objectList.add(new GameObject(boxFinish5));
+        objectList.add(new GameObject(boxFinish6));
+        objectList.add(new GameObject(boxFinish7));
+        objectList.add(new GameObject(boxFinish8));
+
+//        objectList.add(new GameObject(spike1));
+//        objectList.add(new GameObject(spike2));
+//        objectList.add(new GameObject(spike3));
+//        objectList.add(new GameObject(spike4));
+//        objectList.add(new GameObject(spike5));
+//        objectList.add(new GameObject(spike6));
+//        objectList.add(new GameObject(spike7));
+//
+//        objectList.add(new GameObject(spikeMove1));
+//
+//        player = new Player(rectPlayer);
+//        objectList.add(player);
+
+        gameTimer.start();
+        GameObject.setCameraX(0);
+        GameObject.setCameraY(0);
+
+//        AnimationTimer timer = (l) -> {
+//            for (GameObject o : objectList)
+//                o.update();
+//        };
+//        timer.start();
     }
 
+    private void updateAll() {
+        GameObject.setCameraX(GameObject.getCameraX() + 1   );
+
+        for (GameObject object : objectList) {
+            object.update();
+        }
+    }
+
+    @FXML
     protected void handleKeyPressed(KeyEvent e) {
         switch (e.getCode()) {
-            case LEFT -> player.moveLeft();
-            case RIGHT -> player.moveRight();
-            case SPACE -> player.jump();
+//            case LEFT -> player.moveLeft();
+//            case RIGHT -> player.moveRight();
+//            case SPACE -> player.jump();
+        }
+    }
+
+    @FXML
+    protected void handleKeyReleased(KeyEvent e) {
+        switch (e.getCode()) {
+//            case LEFT -> player.moveLeft();
+//            case RIGHT -> player.moveRight();
+//            case SPACE -> player.jump();
         }
     }
 }
