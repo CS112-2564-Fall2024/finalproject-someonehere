@@ -119,7 +119,7 @@ public class MainController {
         objectList.add(new GameObject(spike7));
 
         objectList.add(new GameObject(spikeMove1));
-//
+
 //        player = new Player(rectPlayer);
 //        objectList.add(player);
 
