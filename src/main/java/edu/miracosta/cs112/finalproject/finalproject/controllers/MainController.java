@@ -1,7 +1,7 @@
 package edu.miracosta.cs112.finalproject.finalproject.controllers;
 
 import edu.miracosta.cs112.finalproject.finalproject.GameObject;
-//import edu.miracosta.cs112.finalproject.finalproject.Player;
+import edu.miracosta.cs112.finalproject.finalproject.Player;
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -74,8 +74,10 @@ public class MainController {
     @FXML
     private Polygon spikeMove1;
     @FXML
+    private Polygon spikeMove2;
+    @FXML
     private Rectangle rectPlayer;
-//    private Player player;
+    private Player player;
 
     ArrayList<GameObject> objectList = new ArrayList<>();
     private AnimationTimer gameTimer = new AnimationTimer() {
@@ -119,9 +121,12 @@ public class MainController {
         objectList.add(new GameObject(spike7));
 
         objectList.add(new GameObject(spikeMove1));
+        objectList.add(new GameObject(spikeMove2));
 
-//        player = new Player(rectPlayer);
-//        objectList.add(player);
+        player = new Player(rectPlayer);
+        objectList.add(player);
+
+        player.setObjectList(objectList);
 
         gameTimer.start();
         GameObject.setCameraX(0);

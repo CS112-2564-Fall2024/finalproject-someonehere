@@ -2,9 +2,10 @@ package edu.miracosta.cs112.finalproject.finalproject;
 
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
 
 public class GameObject {
-    Rectangle shape;
+    Shape shape;
     double layoutX, layoutY;
 
     static double cameraX = 0;
@@ -21,7 +22,7 @@ public class GameObject {
     }
 
     public GameObject(Polygon poly) {
-        this.shape = poly.getBoundsInParent();
+        this.shape = poly;
         this.layoutX = this.shape.getLayoutX();
         this.layoutY = this.shape.getLayoutY();
     }
