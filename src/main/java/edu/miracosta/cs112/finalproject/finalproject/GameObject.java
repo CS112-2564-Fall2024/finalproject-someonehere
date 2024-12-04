@@ -14,8 +14,14 @@ public class GameObject {
     public static double getCameraX() { return cameraX; }
     public static double getCameraY() { return cameraY; }
 
-    public GameObject(Rectangle shape) {
-        this.shape = shape;
+    public GameObject(Rectangle rect) {
+        this.shape = rect;
+        this.layoutX = this.shape.getLayoutX();
+        this.layoutY = this.shape.getLayoutY();
+    }
+
+    public GameObject(Polygon poly) {
+        this.shape = poly.getBoundsInParent();
         this.layoutX = this.shape.getLayoutX();
         this.layoutY = this.shape.getLayoutY();
     }

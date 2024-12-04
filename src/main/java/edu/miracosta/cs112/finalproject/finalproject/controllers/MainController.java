@@ -1,7 +1,7 @@
 package edu.miracosta.cs112.finalproject.finalproject.controllers;
 
 import edu.miracosta.cs112.finalproject.finalproject.GameObject;
-import edu.miracosta.cs112.finalproject.finalproject.Player;
+//import edu.miracosta.cs112.finalproject.finalproject.Player;
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -75,7 +75,7 @@ public class MainController {
     private Polygon spikeMove1;
     @FXML
     private Rectangle rectPlayer;
-    private Player player;
+//    private Player player;
 
     ArrayList<GameObject> objectList = new ArrayList<>();
     private AnimationTimer gameTimer = new AnimationTimer() {
@@ -110,15 +110,15 @@ public class MainController {
         objectList.add(new GameObject(boxFinish7));
         objectList.add(new GameObject(boxFinish8));
 
-//        objectList.add(new GameObject(spike1));
-//        objectList.add(new GameObject(spike2));
-//        objectList.add(new GameObject(spike3));
-//        objectList.add(new GameObject(spike4));
-//        objectList.add(new GameObject(spike5));
-//        objectList.add(new GameObject(spike6));
-//        objectList.add(new GameObject(spike7));
-//
-//        objectList.add(new GameObject(spikeMove1));
+        objectList.add(new GameObject(spike1));
+        objectList.add(new GameObject(spike2));
+        objectList.add(new GameObject(spike3));
+        objectList.add(new GameObject(spike4));
+        objectList.add(new GameObject(spike5));
+        objectList.add(new GameObject(spike6));
+        objectList.add(new GameObject(spike7));
+
+        objectList.add(new GameObject(spikeMove1));
 //
 //        player = new Player(rectPlayer);
 //        objectList.add(player);
