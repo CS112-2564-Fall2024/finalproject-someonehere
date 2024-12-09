@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
 
 import java.util.ArrayList;
 
@@ -91,6 +92,14 @@ public class MainController {
 
     @FXML
     private void initialize() {
+        labelInstructions.setText("Left & right arrows to move\nSpace to jump\nCurrent error," +
+                                                                        " requires players to jump to start");
+
+//        labelInstructions.setFont(new Font("Arial", 20));
+
+//        Image saveImage = new Image("file:./resources/0.png");
+//        imageSave.setImage(saveImage);
+
         objectList.add(new GameObject(ground1));
         objectList.add(new GameObject(ground2));
         objectList.add(new GameObject(ground3));
