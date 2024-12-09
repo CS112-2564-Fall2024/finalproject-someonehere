@@ -49,27 +49,43 @@ public class Player extends GameObject {
         deltaX += 0.0;
         deltaY += 0.1;
 
+        /**
+         * Registers if Player collides with another GameObject
+         */
         for (GameObject object : objectList) {
             if (this.intersects(object)) {
                 deltaX = -MainController.CAMERA_X_DELTA;
             }
         }
 
-//        double oldX = this.layoutX;
+        /**
+         * Allows Player to move
+         */
+        double oldX = this.layoutX;
         double oldY = this.layoutY;
         this.layoutX += deltaX;
         this.layoutY += deltaY;
         this.shape.setLayoutX(layoutX);
         this.shape.setLayoutY(layoutY);
 
+        /**
+         * Stops Player from getting stuck on the Y axis
+         */
         for (GameObject object : objectList) {
             if (this.intersects(object)) {
-//                this.layoutX = oldX;
                 this.layoutY = oldY;
-//                deltaX = 0;
                 deltaY = 0;
-//                this.shape.setLayoutX(layoutX);
                 this.shape.setLayoutY(layoutY);
+            }
+        }
+        /**
+         * Stops Player from getting stuck on the X axis
+         */
+        for (GameObject object : objectList) {
+            if (this.intersects(object)) {
+                this.layoutX = oldX;
+                deltaX = 0;
+                this.shape.setLayoutX(layoutX);
             }
         }
     }
