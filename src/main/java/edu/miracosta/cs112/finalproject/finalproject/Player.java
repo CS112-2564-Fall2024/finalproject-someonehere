@@ -20,6 +20,7 @@ public class Player extends GameObject {
     }
     public void tryMove(ArrayList<GameObject> objects) {
         // todo: move logic
+        // Maybe have already did it.
 
 
         for (GameObject object : objects) {
