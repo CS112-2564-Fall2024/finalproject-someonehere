@@ -1,5 +1,6 @@
 package edu.miracosta.cs112.finalproject.finalproject;
 
+import edu.miracosta.cs112.finalproject.finalproject.controllers.MainController;
 import javafx.scene.shape.Rectangle;
 
 import java.lang.reflect.Array;
@@ -27,24 +28,31 @@ public class Player extends GameObject {
     }
 
     // Moving Speed
-//    public void moveLeft() {
-//        deltaX = -1;
-//    }
-//    public void moveRight() {
-//        deltaX = 1;
-//    }
+    public void moveLeft() {
+        deltaX = -2;
+    }
+    public void moveRight() {
+        deltaX = 1;
+    }
     public void jump() {
         deltaY = -5;
     }
 
     public void update() {
-//        deltaX += 0.1;
+        deltaX += 0.0;
         deltaY += 0.1;
+
+        for (GameObject object : objectList) {
+            if (this.intersects(object)) {
+                deltaX = -MainController.CAMERA_X_DELTA;
+            }
+        }
+
 //        double oldX = this.layoutX;
         double oldY = this.layoutY;
-//        this.layoutX += deltaX;
+        this.layoutX += deltaX;
         this.layoutY += deltaY;
-//        this.shape.setLayoutX(layoutX);
+        this.shape.setLayoutX(layoutX);
         this.shape.setLayoutY(layoutY);
 
         for (GameObject object : objectList) {

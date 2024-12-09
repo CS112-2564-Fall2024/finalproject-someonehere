@@ -13,6 +13,8 @@ import javafx.scene.shape.Rectangle;
 import java.util.ArrayList;
 
 public class MainController {
+    final static public double CAMERA_X_DELTA = 1;
+
     @FXML
     private Label labelInstructions;
     @FXML
@@ -151,8 +153,8 @@ public class MainController {
     @FXML
     protected void handleKeyPressed(KeyEvent e) {
         switch (e.getCode()) {
-//            case LEFT -> player.moveLeft();
-//            case RIGHT -> player.moveRight();
+            case LEFT -> player.moveLeft();
+            case RIGHT -> player.moveRight();
             case SPACE -> player.jump();
         }
     }
