@@ -92,8 +92,8 @@ public class MainController {
 
     @FXML
     private void initialize() {
-        labelInstructions.setText("Left & right arrows to move\nSpace to jump\nCurrent error," +
-                                                                        " requires players to jump to start");
+        labelInstructions.setText("Left & right arrows to move\nSpace to jump\nCurrent error:" +
+                                                                        " Requires players to jump to start moving");
 
 //        labelInstructions.setFont(new Font("Arial", 20));
 
