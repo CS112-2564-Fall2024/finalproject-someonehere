@@ -20,7 +20,7 @@ public class Player extends GameObject {
     }
     public void tryMove(ArrayList<GameObject> objects) {
         // todo: move logic
-        // Maybe have already did it.
+        // Maybe have already did it in main controller.
 
 
         for (GameObject object : objects) {
@@ -35,6 +35,10 @@ public class Player extends GameObject {
     public void moveRight() {
         deltaX = 1;
     }
+    /** Error, after if statement around deltaY = -5;
+     * Player doesn't stop moving and gets stuck
+     * more against objects
+     */
     public void jump() {
         if (Math.abs(deltaY) <= 0.2) {
             deltaY = -5;

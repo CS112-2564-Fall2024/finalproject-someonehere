@@ -151,7 +151,7 @@ public class MainController {
     }
 
     private void updateAll() {
-        GameObject.setCameraX(GameObject.getCameraX() + 1   );
+        GameObject.setCameraX(GameObject.getCameraX() + 1);
 
         for (GameObject object : objectList) {
             object.update();
