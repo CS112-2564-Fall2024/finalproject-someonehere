@@ -1,4 +1,5 @@
 package edu.miracosta.cs112.finalproject.finalproject;
 
-public class Obstacle {
-}
+//public class Obstacle extends GameObject {
+//
+//}
