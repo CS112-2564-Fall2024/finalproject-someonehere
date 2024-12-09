@@ -36,7 +36,9 @@ public class Player extends GameObject {
         deltaX = 1;
     }
     public void jump() {
-        deltaY = -5;
+        if (Math.abs(deltaY) <= 0.2) {
+            deltaY = -5;
+        }
     }
 
     public void update() {
