@@ -147,12 +147,13 @@ public class MainController {
         }
     }
 
+    // Move Controls
     @FXML
     protected void handleKeyPressed(KeyEvent e) {
         switch (e.getCode()) {
 //            case LEFT -> player.moveLeft();
 //            case RIGHT -> player.moveRight();
-//            case SPACE -> player.jump();
+            case SPACE -> player.jump();
         }
     }
 

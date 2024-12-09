@@ -29,11 +29,8 @@ public class GameObject {
 
     // tells if colliding or not
     public boolean intersects(GameObject gameObject) {
-        if (this == gameObject) {
-            return false;
-        }
-
-        return (shape.getBoundsInParent().intersects(gameObject.shape.getBoundsInParent()));
+        if (this == gameObject || getClass() == null) return false;
+        return this.shape.getBoundsInParent().intersects(gameObject.shape.getBoundsInParent());
     }
 
     public void update() {

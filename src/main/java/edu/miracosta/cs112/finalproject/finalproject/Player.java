@@ -26,28 +26,34 @@ public class Player extends GameObject {
         }
     }
 
+    // Moving Speed
+//    public void moveLeft() {
+//        deltaX = -1;
+//    }
+//    public void moveRight() {
+//        deltaX = 1;
+//    }
+    public void jump() {
+        deltaY = -5;
+    }
+
     public void update() {
-        deltaX += 0.1;
+//        deltaX += 0.1;
         deltaY += 0.1;
-
-        double oldX = this.layoutX;
+//        double oldX = this.layoutX;
         double oldY = this.layoutY;
-
-        this.layoutX += deltaX;
+//        this.layoutX += deltaX;
         this.layoutY += deltaY;
-
-        this.shape.setLayoutX(layoutX);
-        this.shape.setLayoutX(layoutX);
+//        this.shape.setLayoutX(layoutX);
+        this.shape.setLayoutY(layoutY);
 
         for (GameObject object : objectList) {
             if (this.intersects(object)) {
-                this.layoutX = oldX;
+//                this.layoutX = oldX;
                 this.layoutY = oldY;
-
-                deltaX = 0;
+//                deltaX = 0;
                 deltaY = 0;
-
-                this.shape.setLayoutX(layoutX);
+//                this.shape.setLayoutX(layoutX);
                 this.shape.setLayoutY(layoutY);
             }
         }
