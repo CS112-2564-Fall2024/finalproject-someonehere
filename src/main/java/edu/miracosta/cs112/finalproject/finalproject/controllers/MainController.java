@@ -130,6 +130,7 @@ public class MainController {
 
     @FXML
     private void initialize() {
+        // todo: add a gameover and stage finished window.
 
         /**
          * Adding instructions to labelInstructions
