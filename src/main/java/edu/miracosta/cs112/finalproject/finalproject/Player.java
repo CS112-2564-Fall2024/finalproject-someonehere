@@ -1,6 +1,7 @@
 package edu.miracosta.cs112.finalproject.finalproject;
 
 import edu.miracosta.cs112.finalproject.finalproject.controllers.MainController;
+import edu.miracosta.cs112.finalproject.finalproject.exceptions.PlayerNotMovingExcepton;
 import javafx.scene.shape.Rectangle;
 
 import java.lang.reflect.Array;
@@ -95,5 +96,16 @@ public class Player extends GameObject {
         }
     }
 
+    public void add(Player newPlayer) throws PlayerNotMovingExcepton {
+        if (newPlayer.deltaX == 0 && newPlayer.deltaY == 0) {
 
+        }
+        else {
+            try {
+
+            } catch (PlayerNotMovingExcepton e) {
+                System.out.println("Error002: Requires Player to jump to start moving");
+            }
+        }
+    }
 }
