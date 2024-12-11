@@ -2,6 +2,7 @@ package edu.miracosta.cs112.finalproject.finalproject.controllers;
 
 import edu.miracosta.cs112.finalproject.finalproject.GameObject;
 import edu.miracosta.cs112.finalproject.finalproject.Player;
+import edu.miracosta.cs112.finalproject.finalproject.exceptions.PlayerNotMovingExcepton;
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -238,7 +239,7 @@ public class MainController {
      * @param e
      */
     @FXML
-    protected void handleKeyPressed(KeyEvent e) {
+    protected void handleKeyPressed(KeyEvent e) throws PlayerNotMovingExcepton {
         switch (e.getCode()) {
             case LEFT -> player.moveLeft();
             case RIGHT -> player.moveRight();
@@ -253,11 +254,11 @@ public class MainController {
      * @param e
      */
     @FXML
-    protected void handleKeyReleased(KeyEvent e) {
+    protected void handleKeyReleased(KeyEvent e) throws PlayerNotMovingExcepton {
         switch (e.getCode()) {
 //            case LEFT -> player.moveLeft();
 //            case RIGHT -> player.moveRight();
-//            case SPACE -> player.jump();
+            case SPACE -> player.jump();
         }
     }
 }

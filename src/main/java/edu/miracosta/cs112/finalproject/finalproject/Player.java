@@ -45,25 +45,26 @@ public class Player extends GameObject {
      * Player doesn't stop moving and gets stuck
      * more against objects
      */
-    public void jump() {
+    public void jump() throws PlayerNotMovingExcepton {
         if (Math.abs(deltaY) <= 0.2) {
             deltaY = -5;
         }
+
+        checkException();
     }
 
-//    public void checkException() throws PlayerNotMovingExcepton {
-//        try {
-//            if (this.deltaX == 0 && this.deltaY == 0) {
-//                throw new PlayerNotMovingExcepton();
-//            }
-//        } catch (PlayerNotMovingExcepton e) {
-//            System.out.println(e);
-//            System.out.println("Error002: Requires Player to jump to start moving");
-//        }
-//    }
+    public void checkException() throws PlayerNotMovingExcepton {
+        try {
+            if (this.deltaX == 0 && this.deltaY == 0) {
+                throw new PlayerNotMovingExcepton();
+            }
+        } catch (PlayerNotMovingExcepton e) {
+            System.out.println(e);
+            System.out.println("Error002: Requires Player to jump to start moving");
+        }
+    }
 
     public void update() {
-//        this.checkException();
 
         deltaX += 0.0;
         deltaY += 0.1;
