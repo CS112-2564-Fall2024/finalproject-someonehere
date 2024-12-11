@@ -96,16 +96,16 @@ public class Player extends GameObject {
         }
     }
 
-    public void add(Player newPlayer) throws PlayerNotMovingExcepton {
-        if (newPlayer.deltaX == 0 && newPlayer.deltaY == 0) {
-
-        }
-        else {
-            try {
-
-            } catch (PlayerNotMovingExcepton e) {
-                System.out.println("Error002: Requires Player to jump to start moving");
-            }
-        }
-    }
+//    public void add(Player newPlayer) throws PlayerNotMovingExcepton {
+//        if (newPlayer.deltaX == 0 && newPlayer.deltaY == 0) {
+//
+//        }
+//        else {
+//            try {
+//
+//            } catch (PlayerNotMovingExcepton e) {
+//                System.out.println("Error002: Requires Player to jump to start moving");
+//            }
+//        }
+//    }
 }
