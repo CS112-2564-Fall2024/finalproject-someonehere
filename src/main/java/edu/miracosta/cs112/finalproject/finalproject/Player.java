@@ -51,7 +51,20 @@ public class Player extends GameObject {
         }
     }
 
+//    public void checkException() throws PlayerNotMovingExcepton {
+//        try {
+//            if (this.deltaX == 0 && this.deltaY == 0) {
+//                throw new PlayerNotMovingExcepton();
+//            }
+//        } catch (PlayerNotMovingExcepton e) {
+//            System.out.println(e);
+//            System.out.println("Error002: Requires Player to jump to start moving");
+//        }
+//    }
+
     public void update() {
+//        this.checkException();
+
         deltaX += 0.0;
         deltaY += 0.1;
 
@@ -95,17 +108,4 @@ public class Player extends GameObject {
             }
         }
     }
-
-//    public void add(Player newPlayer) throws PlayerNotMovingExcepton {
-//        if (newPlayer.deltaX == 0 && newPlayer.deltaY == 0) {
-//
-//        }
-//        else {
-//            try {
-//
-//            } catch (PlayerNotMovingExcepton e) {
-//                System.out.println("Error002: Requires Player to jump to start moving");
-//            }
-//        }
-//    }
 }
