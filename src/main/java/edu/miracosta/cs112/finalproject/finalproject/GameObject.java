@@ -16,9 +16,29 @@ public class GameObject {
      */
     static double cameraX = 0;
     static double cameraY = 0;
+    /**
+     * Setting Camera's X position
+     *
+     * @param X
+     */
     public static void setCameraX(double X) { cameraX = X; }
+    /**
+     * Setting Camera's Y position
+     *
+     * @param Y
+     */
     public static void setCameraY(double Y) { cameraY = Y; }
+    /**
+     * Getting Camera's X position
+     *
+     * @return cameraX
+     */
     public static double getCameraX() { return cameraX; }
+    /**
+     * Getting Camera's Y position
+     *
+     * @return cameraY
+     */
     public static double getCameraY() { return cameraY; }
 
     /**
@@ -34,6 +54,7 @@ public class GameObject {
 
     /**
      * GameObjects if they are a poly
+     *
      * @param poly
      */
     public GameObject(Polygon poly) {

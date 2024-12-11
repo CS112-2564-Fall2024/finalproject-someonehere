@@ -18,17 +18,22 @@ public class Player extends GameObject {
     public Player(Rectangle shape) {
         super(shape);
     }
+
+    /**
+     * Checks for collision with another GameObject
+     */
     public void tryMove(ArrayList<GameObject> objects) {
         // todo: move logic
         // Maybe have already did it in main controller.
-
 
         for (GameObject object : objects) {
             boolean collides = this.intersects(object);
         }
     }
 
-    // Moving Speed
+    /**
+     * Moving Speed
+     */
     public void moveLeft() {
         deltaX = -2;
     }
@@ -69,7 +74,7 @@ public class Player extends GameObject {
         this.shape.setLayoutY(layoutY);
 
         /**
-         * Stops Player from getting stuck on the Y axis
+         * Stops Player from getting stuck on the Y axis when colliding
          */
         for (GameObject object : objectList) {
             if (this.intersects(object)) {
@@ -79,7 +84,7 @@ public class Player extends GameObject {
             }
         }
         /**
-         * Stops Player from getting stuck on the X axis
+         * Stops Player from getting stuck on the X axis when colliding
          */
         for (GameObject object : objectList) {
             if (this.intersects(object)) {
